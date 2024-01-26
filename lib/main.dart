@@ -40,9 +40,7 @@ class _PinLoginPageState extends State<PinLoginPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        
-      ),
+      appBar: AppBar(),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
@@ -77,10 +75,151 @@ class _PinLoginPageState extends State<PinLoginPage> {
                   onPressed: () => _onButtonPressed(value),
                   style: ElevatedButton.styleFrom(
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8.0),
+                      borderRadius: BorderRadius.circular(0.0), // Set borderRadius to 0.0 for rectangles
                     ),
+                    // You can customize other properties here, like padding, elevation, etc.
                   ),
-                  child: Text(value),
+                  child: value == "1"
+                      ? Column(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              value,
+                              style: TextStyle(fontSize: 18.0),
+                            ),
+                            Text(
+                              "One",
+                              style: TextStyle(fontSize: 14.0),
+                            ),
+                          ],
+                        )
+                      : value == "2"
+                          ? Column(
+                              mainAxisAlignment: MainAxisAlignment.center,
+                              children: [
+                                Text(
+                                  value,
+                                  style: TextStyle(fontSize: 18.0),
+                                ),
+                                Text(
+                                  "Two",
+                                  style: TextStyle(fontSize: 14.0),
+                                ),
+                              ],
+                            )
+                          : value == "3"
+                              ? Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      value,
+                                      style: TextStyle(fontSize: 18.0),
+                                    ),
+                                    Text(
+                                      "Three",
+                                      style: TextStyle(fontSize: 14.0),
+                                    ),
+                                  ],
+                                )
+                                : value == "4"
+                              ? Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      value,
+                                      style: TextStyle(fontSize: 18.0),
+                                    ),
+                                    Text(
+                                      "Four",
+                                      style: TextStyle(fontSize: 14.0),
+                                    ),
+                                  ],
+                                )
+                                : value == "5"
+                              ? Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      value,
+                                      style: TextStyle(fontSize: 18.0),
+                                    ),
+                                    Text(
+                                      "Five",
+                                      style: TextStyle(fontSize: 14.0),
+                                    ),
+                                  ],
+                                )
+                                : value == "6"
+                              ? Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      value,
+                                      style: TextStyle(fontSize: 18.0),
+                                    ),
+                                    Text(
+                                      "Six",
+                                      style: TextStyle(fontSize: 14.0),
+                                    ),
+                                  ],
+                                )
+                                : value == "7"
+                              ? Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      value,
+                                      style: TextStyle(fontSize: 18.0),
+                                    ),
+                                    Text(
+                                      "Seven",
+                                      style: TextStyle(fontSize: 14.0),
+                                    ),
+                                  ],
+                                )
+                                : value == "8"
+                              ? Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      value,
+                                      style: TextStyle(fontSize: 18.0),
+                                    ),
+                                    Text(
+                                      "Eight",
+                                      style: TextStyle(fontSize: 14.0),
+                                    ),
+                                  ],
+                                )
+                                : value == "9"
+                              ? Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      value,
+                                      style: TextStyle(fontSize: 18.0),
+                                    ),
+                                    Text(
+                                      "Nine",
+                                      style: TextStyle(fontSize: 14.0),
+                                    ),
+                                  ],
+                                )
+                                : value == "0"
+                              ? Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(
+                                      value,
+                                      style: TextStyle(fontSize: 18.0),
+                                    ),
+                                    Text(
+                                      "Zero",
+                                      style: TextStyle(fontSize: 14.0),
+                                    ),
+                                  ],
+                                )
+                              : Text(value),
                 ),
               ))
           .toList(),
